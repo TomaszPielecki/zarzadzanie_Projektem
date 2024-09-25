@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista projektów</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista projektów</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nazwa</th>
+                    <th>Opis</th>
+                    <th>Data rozpoczęcia</th>
+                    <th>Data zakończenia</th>
+                    <th>Status</th>
+                    <th>Odpowiedzialny</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for projekt in projekty %}
+                <tr>
+                    <td>{{ projekt.id }}</td>
+                    <td>{{ projekt.nazwa }}</td>
+                    <td>{{ projekt.opis }}</td>
+                    <td>{{ projekt.data_rozpoczecia }}</td>
+                    <td>{{ projekt.data_zakonczenia | default('N/A') }}</td>
+                    <td>{{ projekt.status }}</td>
+                    <td>{{ projekt.odpowiedzialny }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

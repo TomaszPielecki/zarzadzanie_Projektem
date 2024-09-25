@@ -1,0 +1,73 @@
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-stack: 'Arial', sans-serif;
+
+body {
+    font-family: $font-stack;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: $primary-color;
+    text-align: center; // Wyśrodkowanie nagłówków
+}
+
+.container {
+    max-width: 800px; // Maksymalna szerokość kontenera
+    margin: 0 auto; // Wyśrodkowanie kontenera
+    padding: 20px;
+    background-color: white; // Tło kontenera
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+
+    th, td {
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: left;
+
+        &:hover {
+            background-color: #f1f1f1;
+        }
+    }
+}
+
+form {
+    margin-bottom: 20px; // Odstęp pomiędzy formularzami
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    label {
+        display: block;
+        margin: 10px 0 5px;
+    }
+
+    input, textarea, select {
+        width: calc(100% - 22px); // Szerokość z marginesami
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        background-color: $secondary-color;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken($secondary-color, 10%);
+        }
+    }
+}
